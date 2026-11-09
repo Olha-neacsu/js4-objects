@@ -304,3 +304,100 @@
 // console.log(getTotalSalary({ barista: 120, manager: 90 })); // 210
 
 //11----------------------------------------------------------------------------
+/*
+ * Функція getOrderTotal(order) рахує підсумкову суму замовлення.
+ *   order — масив позицій; кожна позиція це обʼєкт із властивостями
+ *   name (напій), price (ціна) і quantity (кількість).
+ *
+ * 1. Оголоси всередині функції змінну total зі значенням 0.
+ * 2. Перебери масив order циклом for...of.
+ * 3. Для кожної позиції додай до total її вартість — ціну, помножену на кількість.
+ * 4. Поверни total.
+ */
+
+// Твій код тут
+
+// function getOrderTotal(order) {
+//   let total = 0;
+
+//   for (const item of order) {
+//     total += item.price * item.quantity;
+//   }
+//   return total;
+// }
+
+// console.log(
+//   getOrderTotal([
+//     { name: "Espresso", price: 60, quantity: 2 },
+//     { name: "Latte", price: 85, quantity: 1 },
+//     { name: "Cheesecake", price: 120, quantity: 3 },
+//   ]),
+// ); // 565
+
+// console.log(
+//   getOrderTotal([
+//     { name: "Cappuccino", price: 75, quantity: 2 },
+//     { name: "Muffin", price: 55, quantity: 1 },
+//   ]),
+// ); // 205
+
+// console.log(getOrderTotal([{ name: "Americano", price: 50, quantity: 1 }])); // 50
+
+//12--------------------------------------------------------------------------
+/*
+ * Функція findRoom(doctors, target) знаходить кабінет лікаря потрібної спеціальності.
+ *   doctors — масив лікарів; кожен лікар це обʼєкт із властивостями
+ *   specialty (спеціальність) і room (кабінет).
+ *   target — шукана спеціальність.
+ *
+ * 1. Перебери масив doctors циклом for...of.
+ * 2. Якщо specialty лікаря дорівнює target, поверни його room.
+ * 3. Якщо жоден лікар не підійшов, поверни null.
+ */
+
+// const clinicDoctors = [
+//   { specialty: "therapist", room: 12 },
+//   { specialty: "surgeon", room: 7 },
+//   { specialty: "orthodontist", room: 21 },
+// ];
+
+// // Твій код тут
+
+// function findRoom(doctors, target) {
+//   for (const doctor of doctors) {
+//     if (doctor.specialty === target) {
+//       return doctor.room;
+//     }
+//   }
+//   return null;
+// }
+// console.log(findRoom(clinicDoctors, "surgeon")); // 7
+// console.log(findRoom(clinicDoctors, "therapist")); // 12
+// console.log(findRoom(clinicDoctors, "dentist")); // null
+
+//13-------------------------------------------------------------
+/*
+ * Оголоси обʼєкт coffeeMenu, який описує меню Sunny Coffee, з властивостями:
+ * 1. items — масив для позицій меню. Поки що порожній.
+ * 2. getItems() — метод, який повертає рядок 'List of all menu items'.
+ * 3. addItem(itemName) — метод, який повертає рядок 'Adding ' разом
+ *    зі значенням параметра itemName (наприклад, 'Adding Latte').
+ */
+
+// Твій код тут
+
+// const coffeeMenu = {
+//   items: [],
+//   getItems() {
+//     return "List of all menu items";
+//   },
+//   addItem(itemName) {
+//     return `Adding ${itemName}`;
+//   },
+// };
+
+// console.log(coffeeMenu.getItems()); // List of all menu items
+// console.log(coffeeMenu.addItem("Latte")); // Adding Latte
+// console.log(coffeeMenu.addItem("Cheesecake")); // Adding Cheesecake
+
+//14------------------------------------------------------------------
